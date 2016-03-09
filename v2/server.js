@@ -41,7 +41,7 @@ app.get('/setup', function(req, res) {
 // API routes ==================================================
 var apiRoutes = express.Router();
 
-// route --> api/authentication/ = authenticate a user
+// api/authentication/ = authenticate a user
 apiRoutes.post('/authenticate', function(req, res) {
     // find the user
     console.log(req.body.name);
@@ -72,12 +72,38 @@ apiRoutes.post('/authenticate', function(req, res) {
     });
 });
 
-// route --> api/
+// route to verify a token
+apiRoutes.use(function(req, res, next) {
+    var token = req.body.token || req.query.token || req.headers['x-access-token'];
+
+    // decode a token
+    if(token) {
+        // verifies secret and checks expiration
+        jwt.verify(token, app.get('secret'), function(err, decoded) {
+            if(err) {
+                return res.json({ success: false, message: 'Failed to authenticate token.' });
+            } else {
+                // save to request
+                req.decoded = decoded;
+                next();
+            }
+        });
+    } else {
+        // there is no token, return an error
+        return res.status(403).send({
+            success: false,
+            message: 'No token provided.'
+        });
+    }
+});
+
+
+// api/ route
 apiRoutes.get('/', function(req, res) {
     res.json({ message: 'Welcome to the api' });
 });
 
-// route --> api/users = return all users
+// api/users route = return all users
 apiRoutes.get('/users', function(req, res) {
     User.find({}, function(err, users) {
         res.json(users);
