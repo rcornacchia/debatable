@@ -1,3 +1,4 @@
 module.exports = {
-    'database': 'mongodb://127.0.0.1:27017/test'
+    'secret' : 'j5a88bjekj33355kjlkj',
+    'database': 'mongodb://127.0.0.1:27017/users'
 }
