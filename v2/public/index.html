@@ -16,43 +16,38 @@
           <a class="navbar-brand" href="#">Daybatable</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Archive</a></li>
-          <li><a href="#">Upcoming</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Archive</a></li>
+            <li><a href="#">Current</a></li>
+            <li><a href="#">Upcoming</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign Up</a></li>
         </ul>
       </div>
     </nav>
 
     <div class="container">
         <h3>Debate topic</h3>
-        <p>Argument 1</p>
-        <form class="form" role="search">
+        <button class="btn btn-primary" id="showForm">Post Argument</button>
+        <form class="form" id="argumentForm">
             <div class="form-group">
                 <input type="text" id="thesis" class="form-control" placeholder="Main Point (1 sentence)">
                 <textarea class="form-control" rows="5" placeholder="Argument" id="comment"></textarea>
             </div>
-            <div id="positionDropdown" class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Select Position
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">For</a></li>
-                <li><a href="#">Against</a></li>
-              </ul>
+            <div id="buttons" class="btn-group" data-toggle="buttons">
+                <label id="forButton" class="btn btn-info inactive">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked>For
+                </label>
+                <label id="againstButton" class="position btn btn-danger inactive">
+                    <input type="radio" name="options" id="option2" autocomplete="off">Against
+                </label>
             </div>
+            </br>
             <button type="submit" id="submitArgument" class="btn btn-primary">Submit</button>
         </form>
+        <p>Argument 1</p>
 
-        <div class="row">
+
     </div>
-
-    <div class="container">
-    	<div class="row">
-
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
