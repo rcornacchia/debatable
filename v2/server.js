@@ -15,12 +15,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(morgan('dev')); // log requests to console
+app.use(express.static(__dirname + '/public'));
+
 
 // routes ======================================================
 // basic route
-app.get('/', function(req, res) {
-    res.send('Hello! The API is at http://localhost:' + port + '/api');
-});
+// app.get('/', function(req, res) {
+
+// });
+
 
 app.get('/setup', function(req, res) {
     //create a sample user
