@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Case</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Bootstrap Case</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Daybatable</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Archive</a></li>
+          <li><a href="#">Upcoming</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
 
-<div class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
-</div>
+    <div class="container">
+        <h3>Debate topic</h3>
+        <p>Argument 1</p>
+        <form class="form" role="search">
+            <div class="form-group">
+                <input type="text" id="thesis" class="form-control" placeholder="Main Point (1 sentence)">
+                <textarea class="form-control" rows="5" placeholder="Argument" id="comment"></textarea>
+            </div>
+            <div id="positionDropdown" class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Select Position
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">For</a></li>
+                <li><a href="#">Against</a></li>
+              </ul>
+            </div>
+            <button type="submit" id="submitArgument" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div class="row">
+    </div>
+
+    <div class="container">
+    	<div class="row">
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
 
 </body>
 </html>
