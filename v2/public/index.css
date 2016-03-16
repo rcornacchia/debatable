@@ -1,0 +1,35 @@
+#thesis {
+    margin-bottom: 8px;
+}
+
+#positionDropdown {
+    margin-bottom: 8px;
+}
+
+#argumentForm {
+    display: none;
+}
+
+#submitArgument {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+#showForm {
+    /*margin-top: 8px;*/
+    margin-bottom: 16px;
+}
+
+/*.inactive {
+    opacity: 0.4;
+}*/
+
+
+.position input[type=radio] + label {
+    opacity:0.5;
+}
+
+
+.position input[type=radio]:checked + label {
+    opacity:1;
+}
